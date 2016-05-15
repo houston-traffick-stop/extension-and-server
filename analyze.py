@@ -12,5 +12,3 @@ def analyzeText(url):
             dataToReturn.append(word)
     return dataToReturn
 
-p = analyzeText('http://data.ohouston.org/')
-print p
