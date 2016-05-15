@@ -1,6 +1,5 @@
 from flask import Flask, request
-import urllib
-import BeautifulSoup
+from analyze import analyzeText
 
 app = Flask(__name__)
 
@@ -13,9 +12,8 @@ def submission():
     info = []
     if request.method == 'POST':
         data = request.form['url']
-        information = urllib.urlopen(data).read()
-        soup = BeautifulSoup.BeautifulSoup(information)
-        return str(soup.findAll('p'))
+        information = analyzeText(data)
+        return str(information)
     return "Hi."
 
 if __name__ == "__main__":
