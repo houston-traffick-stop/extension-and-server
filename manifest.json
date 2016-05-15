@@ -1,0 +1,17 @@
+{
+  "manifest_version": 2,
+
+  "name": "Sex Traffic Ad Analyzer",
+  "description": "This extension will analyze a page for detecting sex ads.",
+  "version": "1.0",
+
+  "browser_action": {
+   "default_popup": "popup.html"
+  },
+  
+  "permissions": [
+   "activeTab",
+   "http://localhost/*"
+   ]
+}
+
